@@ -88,7 +88,7 @@ const Navbar = () => {
           </ul>
         </div>
         <Link to="/" className=" text-[#DAC6A8] text-3xl font-bold">
-          A. Ash
+          Ash
         </Link>
       </div>
 

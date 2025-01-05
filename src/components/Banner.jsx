@@ -60,7 +60,8 @@ const Banner = () => {
         {/* Left Section (Text Content) */}
         <div className="max-w-lg">
           <p className="text-sm font-medium text-[#D2B48C]">
-            ✦ Starting My Journey in Content Creation
+            ✦ Starting as a web developer is an exciting and rewarding journey
+            ahead.
           </p>
           <h1 className="text-4xl font-bold leading-tight mt-4 text-[#DAC6A8]">
             Building Websites with Passion and Purpose

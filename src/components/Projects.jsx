@@ -73,7 +73,7 @@ const Projects = () => {
               <img
                 src={project.image}
                 alt={project.name}
-                className="w-full h-64 object-cover"
+                className="w-full h-52"
               />
             </figure>
             <div className="card-body p-6">

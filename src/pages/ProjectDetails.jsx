@@ -6,7 +6,7 @@ const ProjectDetails = () => {
   const project = useLoaderData();
 
   return (
-    <div className="min-h-screen bg-gray-900 text-white py-8">
+    <div className="min-h-screen bg-gray-900 text-white p-3">
       <div className="px-3">
         {/* Project Header */}
         <div className="text-center">
