@@ -61,7 +61,7 @@ const Navbar = () => {
   );
 
   return (
-    <div className="navbar sticky -top-1 container mx-auto z-40 bg-black">
+    <div className="navbar sticky -top-1 mx-w-[1320px] mx-auto z-40 bg-black">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -96,13 +96,11 @@ const Navbar = () => {
         <ul className="menu menu-horizontal px-1">{links}</ul>
       </div>
 
-      <div className="navbar-end">
-        <Link
-          to={cvLink}
-          target="_blank"
-          className="btn bg-[#D2B48C] text-black border-none hover:bg-[#C0A276] mt-6"
-        >
-          Download CV <FaDownload />
+      <div className="navbar-end ">
+        <Link to={cvLink} target="_blank">
+          <button className="btn bg-[#D2B48C] text-black border-none hover:bg-[#C0A276] ">
+            Download CV <FaDownload />
+          </button>
         </Link>
       </div>
     </div>

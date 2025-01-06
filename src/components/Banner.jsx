@@ -17,7 +17,7 @@ const Banner = () => {
         {/* Right Section (Image and Icons) */}
         <div className="relative text-center">
           <img
-            src="https://i.ibb.co.com/PT4mYTm/PXL-20230106-171208543-01-removebg.png"
+            src="https://i.ibb.co.com/LNyqH8T/PXL-20230106-171208543-01-removebg-2.png"
             alt="Person"
             className="h-[300px] sm:h-[500px] md:h-[600px] mx-auto lg:h-[600px] object-contain"
           />
