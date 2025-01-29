@@ -9,30 +9,25 @@ import Projects from "../components/Projects";
 const Home = () => {
   return (
     <div className="space-y-3 p-3">
-      <Banner></Banner>
-      <div className="max-w-sm  md:max-w-2xl lg:max-w-4xl xl:max-w-7xl mx-auto">
-        <hr />
+      <Banner />
+      <div id="about">
+        <AboutMe />
       </div>
-      <AboutMe></AboutMe>
-      <div className="max-w-sm md:max-w-2xl lg:max-w-4xl xl:max-w-7xl mx-auto">
-        <hr />
+      <hr className="max-w-7xl mx-auto" />
+      <div id="skills">
+        <Skills />
       </div>
-      <Skills></Skills>
-      <div className="max-w-sm md:max-w-2xl lg:max-w-4xl xl:max-w-7xl mx-auto">
-        <hr />
+      <hr className="max-w-7xl mx-auto" />
+      <div id="projects">
+        <Projects />
       </div>
-      <div>
-        <Projects></Projects>
+      <hr className="max-w-7xl mx-auto" />
+      <div id="education">
+        <Education />
       </div>
-      <div className="max-w-sm  md:max-w-2xl lg:max-w-4xl xl:max-w-7xl mx-auto">
-        <hr />
-      </div>
-      <Education></Education>
-      <div className="max-w-sm md:max-w-2xl lg:max-w-4xl xl:max-w-7xl mx-auto">
-        <hr />
-      </div>
-      <div>
-        <ContactMe></ContactMe>
+      <hr className="max-w-7xl mx-auto" />
+      <div id="contact">
+        <ContactMe />
       </div>
     </div>
   );
