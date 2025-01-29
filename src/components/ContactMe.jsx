@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import toast from "react-hot-toast";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 
 const ContactMe = () => {
@@ -9,7 +10,7 @@ const ContactMe = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Handle form submission here, e.g., send email or save the data
-    alert("Form submitted");
+    toast.success("sent successfully");
   };
 
   return (
@@ -24,7 +25,7 @@ const ContactMe = () => {
             <div>
               <label
                 htmlFor="name"
-                className="block text-sm font-medium text-gray-300"
+                className="block text-base mb-2 font-medium text-gray-300"
               >
                 Name
               </label>
@@ -35,13 +36,14 @@ const ContactMe = () => {
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 className="w-full px-4 py-2 border border-gray-300 rounded-lg bg-black text-white focus:outline-none focus:ring-2 focus:ring-[#D2B48C]"
+                placeholder="Your Name"
                 required
               />
             </div>
             <div>
               <label
                 htmlFor="email"
-                className="block text-sm font-medium text-gray-300"
+                className="block text-base mb-2 font-medium text-gray-300"
               >
                 Email
               </label>
@@ -52,13 +54,14 @@ const ContactMe = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 className="w-full px-4 py-2 border border-gray-300 rounded-lg bg-black text-white focus:outline-none focus:ring-2 focus:ring-[#D2B48C]"
+                placeholder="Your Email"
                 required
               />
             </div>
             <div>
               <label
                 htmlFor="message"
-                className="block text-sm font-medium text-gray-300"
+                className="block text-base mb-2 font-medium text-gray-300"
               >
                 Message
               </label>
@@ -69,12 +72,13 @@ const ContactMe = () => {
                 onChange={(e) => setMessage(e.target.value)}
                 className="w-full px-4 py-2 border border-gray-300 rounded-lg bg-black text-white focus:outline-none focus:ring-2 focus:ring-[#D2B48C]"
                 rows="4"
+                placeholder="Type Message"
                 required
               />
             </div>
             <button
               type="submit"
-              className=" w-full py-2 px-4 text-black bg-[#D2B48C] hover:bg-[#C0A276] rounded-lg focus:outline-none"
+              className=" w-full py-2 px-4 font-bold text-base text-black bg-[#D2B48C] hover:bg-[#C0A276] rounded-lg focus:outline-none"
             >
               Send Message
             </button>
