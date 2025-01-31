@@ -12,9 +12,9 @@ const ContactMe = () => {
     e.preventDefault();
 
     // EmailJS service details
-    const serviceID = "service_tl7h00n"; // Replace with your EmailJS Service ID
-    const templateID = "your_template_id"; // Replace with your EmailJS Template ID
-    const publicKey = "6NhrUYYhU6BaqG2nK"; // Replace with your EmailJS Public Key
+    const serviceID = "service_tl7h00n";
+    const templateID = "your_template_id";
+    const publicKey = "6NhrUYYhU6BaqG2nK";
 
     const templateParams = {
       from_name: name,
