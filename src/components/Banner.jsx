@@ -10,7 +10,7 @@ import {
 
 const Banner = () => {
   const cvLink =
-    "https://drive.google.com/file/d/1JVu9VEC6heB-nC6VYHB3cntr-jouQLak/view?usp=sharing";
+    "https://drive.google.com/file/d/1tizXuiyUe_5kzQYO0KNCPsmSiPbcZrnj/view?usp=sharing";
   return (
     <div className="hero min-h-screen bg-black text-neutral-content">
       <div className="hero-content flex-col lg:flex-row-reverse w-full justify-evenly">
