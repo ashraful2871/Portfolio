@@ -19,8 +19,8 @@ const router = createBrowserRouter([
       {
         path: "/projectDetails/:id",
         element: <ProjectDetails></ProjectDetails>,
-        loader: ({ params }) =>
-          fetch(`${import.meta.env.VITE_API_URL}/projectDetails/${params.id}`),
+        // loader: ({ params }) =>
+        //   fetch(`${import.meta.env.VITE_API_URL}/projectDetails/${params.id}`),
       },
       {
         path: "/skills",

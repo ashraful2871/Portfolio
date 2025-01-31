@@ -1,9 +1,24 @@
+import { useQuery } from "@tanstack/react-query";
+import axios from "axios";
 import React from "react";
 import { FaGithub, FaLink } from "react-icons/fa";
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useParams } from "react-router-dom";
 
 const ProjectDetails = () => {
-  const project = useLoaderData();
+  const { id } = useParams();
+  const { data: project = {}, isLoading } = useQuery({
+    queryKey: ["project-details"],
+    queryFn: async () => {
+      const { data } = await axios.get(
+        `${import.meta.env.VITE_API_URL}/projectDetails/${id}`
+      );
+      return data;
+    },
+  });
+  console.log(project);
+  if (isLoading) {
+    return <span>Loading.......</span>;
+  }
 
   return (
     <div className="min-h-screen bg-gray-900 text-white p-3">

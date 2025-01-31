@@ -2,42 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import axios from "axios";
-
-// const projects = [
-
-//   {
-//     id: 1,
-//     name: "Car Rent",
-//     image: "https://i.ibb.co.com/hWf974X/car.jpg",
-//     techStack: "React, Node.js, MongoDB, Express",
-//     description:
-//       "A user-friendly platform for browsing, booking, and managing car rentals with real-time availability",
-//     liveLink: "#",
-//     githubLink: "#",
-//   },
-//   {
-//     id: 2,
-//     name: "Game Review",
-//     image:
-//       "https://i.ibb.co.com/QHqBy4X/Purple-Blue-Modern-Game-Review-Youtube-Thumbnail.png",
-//     techStack: "React, Node.js, MongoDB, Express",
-//     description:
-//       "A platform for reviewing and rating video games, allowing users to share their experiences, read reviews, and discover new games based on ratings.",
-//     liveLink: "#",
-//     githubLink: "#",
-//   },
-//   {
-//     id: 3,
-//     name: "Solo Sphere",
-//     image:
-//       "https://i.ibb.co.com/sFHZvWB/Purple-and-Black-Futuristic-Artificial-Intelligence-Technology-Banner-1.png",
-//     techStack: "React, Node.js, MongoDB, Express",
-//     description:
-//       "This platfrom any one  can post for job and anyone apply in a job ",
-//     liveLink: "#",
-//     githubLink: "#",
-//   },
-// ];
+import { useQuery } from "@tanstack/react-query";
 
 const Projects = () => {
   const [projects, setProjects] = useState();
@@ -48,6 +13,21 @@ const Projects = () => {
         setProjects(data);
       });
   }, []);
+  console.log(projects);
+
+  // const { data: projects = [], isLoading } = useQuery({
+  //   queryKey: ["project-details"],
+  //   queryFn: async () => {
+  //     const { data } = await axios.get(
+  //       `${import.meta.env.VITE_API_URL}/projects`
+  //     );
+  //     return data;
+  //   },
+  // });
+  // console.log(projects);
+  // if (isLoading) {
+  //   return <span>Loading.......</span>;
+  // }
   return (
     <div className="py-16 bg-black text-neutral-content">
       <div className="text-center mb-12">

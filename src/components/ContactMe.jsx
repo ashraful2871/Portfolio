@@ -7,13 +7,14 @@ const ContactMe = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setLoading(true);
 
-    // EmailJS service details
     const serviceID = "service_tl7h00n";
-    const templateID = "your_template_id";
+    const templateID = "template_5z7i9lz";
     const publicKey = "6NhrUYYhU6BaqG2nK";
 
     const templateParams = {
@@ -34,6 +35,9 @@ const ContactMe = () => {
       .catch((error) => {
         console.error("Error sending email:", error);
         toast.error("Failed to send message. Try again.");
+      })
+      .finally(() => {
+        setLoading(false);
       });
   };
 
@@ -85,12 +89,18 @@ const ContactMe = () => {
                 required
               />
             </div>
-            <button
-              type="submit"
-              className="w-full py-2 px-4 font-bold text-base text-black bg-[#D2B48C] hover:bg-[#C0A276] rounded-lg focus:outline-none"
-            >
-              Send Message
-            </button>
+            {loading ? (
+              <button className="w-full py-1 px-4 font-bold text-base text-black bg-[#D2B48C] hover:bg-[#C0A276] rounded-lg focus:outline-none">
+                <span className="loading loading-spinner"></span>
+              </button>
+            ) : (
+              <button
+                type="submit"
+                className="w-full py-2 px-4 font-bold text-base text-black bg-[#D2B48C] hover:bg-[#C0A276] rounded-lg focus:outline-none"
+              >
+                Send Message
+              </button>
+            )}
           </form>
         </div>
         <div className="border h-[420px] hidden lg:block"></div>
