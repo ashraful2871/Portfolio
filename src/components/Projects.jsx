@@ -3,31 +3,32 @@ import { Link } from "react-router-dom";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import axios from "axios";
 import { useQuery } from "@tanstack/react-query";
+import Loading from "./Loading";
 
 const Projects = () => {
-  const [projects, setProjects] = useState();
-  useEffect(() => {
-    fetch(`${import.meta.env.VITE_API_URL}/projects`)
-      .then((res) => res.json())
-      .then((data) => {
-        setProjects(data);
-      });
-  }, []);
-  console.log(projects);
-
-  // const { data: projects = [], isLoading } = useQuery({
-  //   queryKey: ["project-details"],
-  //   queryFn: async () => {
-  //     const { data } = await axios.get(
-  //       `${import.meta.env.VITE_API_URL}/projects`
-  //     );
-  //     return data;
-  //   },
-  // });
+  // const [projects, setProjects] = useState();
+  // useEffect(() => {
+  //   fetch(`${import.meta.env.VITE_API_URL}/projects`)
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       setProjects(data);
+  //     });
+  // }, []);
   // console.log(projects);
-  // if (isLoading) {
-  //   return <span>Loading.......</span>;
-  // }
+
+  const { data: projects = [], isLoading } = useQuery({
+    queryKey: ["project"],
+    queryFn: async () => {
+      const { data } = await axios.get(
+        `${import.meta.env.VITE_API_URL}/projects`
+      );
+      return data;
+    },
+  });
+  console.log(projects);
+  if (isLoading) {
+    return <Loading></Loading>;
+  }
   return (
     <div className="py-16 bg-black text-neutral-content">
       <div className="text-center mb-12">

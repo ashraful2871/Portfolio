@@ -3,11 +3,12 @@ import axios from "axios";
 import React from "react";
 import { FaGithub, FaLink } from "react-icons/fa";
 import { useLoaderData, useParams } from "react-router-dom";
+import Loading from "../components/Loading";
 
 const ProjectDetails = () => {
   const { id } = useParams();
   const { data: project = {}, isLoading } = useQuery({
-    queryKey: ["project-details"],
+    queryKey: ["projectDetails", id],
     queryFn: async () => {
       const { data } = await axios.get(
         `${import.meta.env.VITE_API_URL}/projectDetails/${id}`
@@ -17,7 +18,7 @@ const ProjectDetails = () => {
   });
   console.log(project);
   if (isLoading) {
-    return <span>Loading.......</span>;
+    return <Loading></Loading>;
   }
 
   return (
