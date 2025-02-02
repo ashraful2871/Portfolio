@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import {
   FaGithub,
@@ -12,7 +13,12 @@ const Banner = () => {
   const cvLink =
     "https://drive.google.com/file/d/1tizXuiyUe_5kzQYO0KNCPsmSiPbcZrnj/view?usp=sharing";
   return (
-    <div className="hero min-h-screen bg-black text-neutral-content">
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
+      className="hero min-h-screen bg-black text-neutral-content"
+    >
       <div className="hero-content flex-col lg:flex-row-reverse w-full justify-evenly">
         {/* Right Section (Image and Icons) */}
         <div className="relative text-center">
@@ -59,19 +65,34 @@ const Banner = () => {
 
         {/* Left Section (Text Content) */}
         <div className="max-w-lg">
-          <p className="text-sm font-medium text-[#D2B48C]">
+          <motion.p
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
+            className="text-sm font-medium text-[#D2B48C]"
+          >
             ✦ Starting as a web developer is an exciting and rewarding journey
             ahead.
-          </p>
-          <h1 className="text-4xl font-bold leading-tight mt-4 text-[#DAC6A8]">
+          </motion.p>
+          <motion.h1
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
+            className="text-4xl font-bold leading-tight mt-4 text-[#DAC6A8]"
+          >
             Building Websites with Passion and Purpose
-          </h1>
-          <p className="text-sm text-gray-400 mt-4 text-[#DAC6A8]">
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.6, ease: "easeOut" }}
+            className="text-sm text-gray-400 mt-4 text-[#DAC6A8]"
+          >
             As a web developer, I’m focused on creating clean, user-friendly
             websites that deliver seamless experiences. I’m constantly learning
             new skills to craft responsive and interactive web solutions that
             bring ideas to life.
-          </p>
+          </motion.p>
           <div className=" block md:hidden">
             <div className=" flex space-x-4 mt-4">
               <a
@@ -105,16 +126,19 @@ const Banner = () => {
               </a>
             </div>
           </div>
-          <Link
-            to={cvLink}
-            target="_blank"
-            className="btn bg-[#D2B48C] text-black border-none hover:bg-[#C0A276] mt-6"
-          >
-            Download CV <FaDownload />
+          <Link to={cvLink} target="_blank">
+            <motion.button
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.8, ease: "easeOut" }}
+              className="btn bg-[#D2B48C] text-black border-none hover:bg-[#C0A276] mt-6"
+            >
+              Download CV <FaDownload />
+            </motion.button>
           </Link>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
