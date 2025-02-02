@@ -77,7 +77,7 @@ const Skills = () => {
               <h3 className="text-xl font-bold text-[#D2B48C] mb-2 text-center">
                 {skill.name}
               </h3>
-              <p className="text-gray-400 mb-4 text-center">
+              <p className="text-gray-400 mb-4 text-center flex-grow">
                 {skill.description}
               </p>
               {/* Progress Bar */}
