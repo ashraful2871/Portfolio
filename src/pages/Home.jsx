@@ -10,6 +10,7 @@ const Home = () => {
   return (
     <div className="space-y-3 p-3">
       <Banner />
+      <hr className="max-w-7xl mx-auto" />
       <div id="about">
         <AboutMe />
       </div>

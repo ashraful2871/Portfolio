@@ -9,9 +9,9 @@ const AboutMe = () => {
         {/* Left Section: Image */}
         <div className="lg:flex lg:justify-center lg:items-center lg:w-1/2 mb-8 lg:mb-0">
           <img
-            src="https://i.ibb.co.com/LNyqH8T/PXL-20230106-171208543-01-removebg-2.png"
+            src="https://i.ibb.co.com/zhYdQPqr/ash-propfollio-image-removebg.png"
             alt="Person"
-            className="h-[300px] sm:h-[500px] md:h-[600px] mx-auto lg:h-[600px] object-contain"
+            className="h-[300px] sm:h-[500px] md:h-[600px] mx-auto lg:h-[600px] p-3 object-cover rounded-full border-4 border-[#DAC6A8] hidden md:block"
           />
         </div>
 

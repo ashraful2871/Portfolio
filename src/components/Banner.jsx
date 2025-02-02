@@ -19,7 +19,7 @@ const Banner = () => {
           <img
             src="https://i.ibb.co.com/zhYdQPqr/ash-propfollio-image-removebg.png"
             alt="Person"
-            className="h-[300px] sm:h-[500px] md:h-[600px] mx-auto lg:h-[600px]  object-cover rounded-full border-4 border-[#DAC6A8]"
+            className="h-[300px] sm:h-[500px] md:h-[600px] mx-auto lg:h-[600px] p-3 object-cover rounded-full border-4 border-[#DAC6A8]"
           />
           {/* Social Media Links */}
           <div className="hidden md:block">
