@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import {
@@ -10,6 +10,9 @@ import {
 } from "react-icons/fa";
 
 const Banner = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const cvLink =
     "https://drive.google.com/file/d/1tizXuiyUe_5kzQYO0KNCPsmSiPbcZrnj/view?usp=sharing";
   return (
