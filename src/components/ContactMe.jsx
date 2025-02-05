@@ -27,7 +27,12 @@ const ContactMe = () => {
       .send(serviceID, templateID, templateParams, publicKey)
       .then((response) => {
         console.log("Email sent successfully:", response);
-        toast.success("Message sent successfully!");
+        toast.success("Message sent successfully!", {
+          style: {
+            background: "#333",
+            color: "#fff",
+          },
+        });
         setName("");
         setEmail("");
         setMessage("");

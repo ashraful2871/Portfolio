@@ -20,9 +20,9 @@ const AboutMe = () => {
           <h2 className="text-4xl font-bold text-[#D2B48C]">About Me</h2>
           <p className="text-gray-400 text-lg mt-6 leading-relaxed text-wrap">
             <span className="text-4xl">Hi</span>, I'm{" "}
-            <strong>Ashraful Islam</strong> I am a frontend Web Developer, and I
-            have progressively learned web technologies like HTML, CSS,
-            JavaScript, React, and MongoDB. I am continuously learning and
+            <strong>Ashraful Islam</strong> I am a Full-stack Developer (MERN
+            Stack), and I have progressively learned web technologies like HTML,
+            CSS, JavaScript, React, and MongoDB. I am continuously learning and
             exploring many new technologies.
           </p>
           <p className="text-gray-400 text-lg mt-4 leading-relaxed">

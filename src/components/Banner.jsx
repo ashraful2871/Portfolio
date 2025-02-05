@@ -54,14 +54,6 @@ const Banner = () => {
               >
                 <FaFacebook className="text-[#DAC6A8] hover:text-white text-2xl" />
               </a>
-
-              <a
-                href="https://www.instagram.com/ashrafulislam2871/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaInstagram className="text-[#DAC6A8] hover:text-white text-2xl" />
-              </a>
             </div>
           </div>
         </div>
@@ -118,14 +110,6 @@ const Banner = () => {
                 rel="noopener noreferrer"
               >
                 <FaFacebook className="text-[#DAC6A8] hover:text-white text-2xl" />
-              </a>
-
-              <a
-                href="https://www.instagram.com/ashrafulislam2871/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaInstagram className="text-[#DAC6A8] hover:text-white text-2xl" />
               </a>
             </div>
           </div>
