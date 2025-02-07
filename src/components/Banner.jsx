@@ -1,20 +1,14 @@
 import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import {
-  FaGithub,
-  FaFacebook,
-  FaLinkedin,
-  FaInstagram,
-  FaDownload,
-} from "react-icons/fa";
+import { FaGithub, FaFacebook, FaLinkedin, FaDownload } from "react-icons/fa";
 
 const Banner = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
   const cvLink =
-    "https://drive.google.com/file/d/1tizXuiyUe_5kzQYO0KNCPsmSiPbcZrnj/view?usp=sharing";
+    "https://drive.usercontent.google.com/u/0/uc?id=1tizXuiyUe_5kzQYO0KNCPsmSiPbcZrnj&export=download";
   return (
     <motion.div
       initial={{ opacity: 0, y: 50 }}

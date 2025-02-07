@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const cvLink =
-    "https://drive.google.com/file/d/1tizXuiyUe_5kzQYO0KNCPsmSiPbcZrnj/view?usp=sharing";
+    "https://drive.usercontent.google.com/u/0/uc?id=1tizXuiyUe_5kzQYO0KNCPsmSiPbcZrnj&export=download";
 
   const scrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);

@@ -1,7 +1,5 @@
 import React from "react";
 import { FaPhoneAlt } from "react-icons/fa";
-import { Link } from "react-router-dom";
-
 const AboutMe = () => {
   const scrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
