@@ -3,6 +3,13 @@ import { FaPhoneAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const AboutMe = () => {
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <div>
       <div className="max-w-7xl mx-auto w-full px-4 py-8 lg:flex lg:justify-between lg:items-center">
@@ -36,12 +43,12 @@ const AboutMe = () => {
             enjoy tackling challenges with creative problem-solving approaches
           </p>
           <div className="mt-8">
-            <Link
-              to="/contact"
+            <button
+              onClick={() => scrollToSection("contact")}
               className="btn bg-[#D2B48C] text-black border-none hover:bg-[#C0A276]"
             >
               Contact Me <FaPhoneAlt />
-            </Link>
+            </button>
           </div>
         </div>
       </div>
