@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import axios from "axios";
@@ -6,16 +5,6 @@ import { useQuery } from "@tanstack/react-query";
 import Loading from "./Loading";
 
 const Projects = () => {
-  // const [projects, setProjects] = useState();
-  // useEffect(() => {
-  //   fetch(`${import.meta.env.VITE_API_URL}/projects`)
-  //     .then((res) => res.json())
-  //     .then((data) => {
-  //       setProjects(data);
-  //     });
-  // }, []);
-  // console.log(projects);
-
   const { data: projects = [], isLoading } = useQuery({
     queryKey: ["project"],
     queryFn: async () => {
@@ -37,12 +26,6 @@ const Projects = () => {
           Here’s a showcase of my projects.
         </p>
       </div>
-      {/* <h2 className="text-4xl font-bold text-center text-[#D2B48C] mb-12">
-        My Projects
-      </h2>
-      <p className="text-gray-400 text-lg mt-4">
-        Here’s a showcase of my projects.
-      </p> */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
         {projects?.map((project) => (
           <div
