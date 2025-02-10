@@ -9,6 +9,7 @@ const Education = () => {
     //   description:
     //     "Focused on humanities and social sciences, building foundational skills in literature, history, and sociology.",
     // },
+
     {
       degree: "Bachelor of Arts in Sociology",
       institution: "Dhaka College",
