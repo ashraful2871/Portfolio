@@ -1,0 +1,9 @@
+{
+  "name": "Collaborative Study",
+  "image": "https://i.ibb.co.com/8DrzwJQr/Blue-Welcome-to-School-Library-Banner-1.png",
+  "techStack": " React, JavaScript, MongoDB, Express Js, Node Js, Tailwind CSS, Local Storage",
+  "description": "The Collaborative Study Platform is designed to connect students, tutors, and administrators, providing tools to schedule study sessions, manage resources, and foster collaborative learning in a streamlined way.",
+  "liveLink": "https://collaborative-study-platform.web.app",
+  "githubLink": "https://github.com/ashraful2871/Collaborative-Study-Client",
+  "challenges": "While working on this project, I encountered a challenge in selecting user roles, as this task was entirely new to me. However, I successfully managed to implement it. Later, I faced another challenge when determining how to display data in the UI based on the user's role. To address this, I created a custom hook responsible for managing user roles. This hook ensures that data is displayed appropriately in the UI according to the user's role. As a result, users can view their respective data on their designated dashboards based on their roles."
+}
